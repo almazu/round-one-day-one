@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round One Day One</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Round One Day One</h1>
+        <div id="section">R1D1: Day 1 of my 100 Days of Code. Keeping it simple by reviewing with HTML and JavaScript. Click the buttons to change the look of this page!
+        </div>
+        <button onclick="colorBackground('gray')">Change Background</button>
+        <button onclick="changeColor('pink');">Change Color</button>
+        <button onclick="enlargeText('xx-large');">Large Text</button>
+        <button onclick="changeFont('Arial, sans-serif');">Change Font</button>
+        <button onclick="revertChanges();">Revert Changes</button>
+    </div>
+
+    <script>
+        var content = document.getElementById("content");
+        var section = document.getElementById("section");
+
+        // function to change background color of element
+        function colorBackground(color) {
+            content.style.backgroundColor = color;
+        } 
+
+        // function to change color
+        function changeColor(color) {
+            section.style.color = color;
+        }
+
+        // function to enlarge text
+        function enlargeText(size) {
+            section.style.fontSize = size;
+        }
+
+        // function to change font family
+        function changeFont(font) {
+            section.style.fontFamily = font;
+        }         
+
+        // function to revert changes
+        function revertChanges() {
+            content.style.backgroundColor = 'white';
+            section.style.color = '';
+            section.style.fontSize = 'initial';
+            section.style.fontFamily = 'serif';
+        } 
+    </script>
+</body>
+
+</html>
